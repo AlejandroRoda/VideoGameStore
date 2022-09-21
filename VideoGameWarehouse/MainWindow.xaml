@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoGameWarehouse"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" MinHeight="596" MinWidth="1129"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
+        WindowStyle="None">
+    <Grid Background="#FF132D40" Margin="0,0,0,-3" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="519"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="817*"/>
+            <ColumnDefinition Width="112*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0"  Grid.Row="0" Grid.RowSpan="2" BorderThickness="1" CornerRadius="8,8,8,8" Background="#FF0A1D2B" Margin="5,5,5,5" >
+            <Grid>
+                <StackPanel VerticalAlignment="Center">
+                    <Button Content="{x:Static local:ResourceEs.buttonClockIn}" Style="{StaticResource ButtonsMenu}" Click="Button_Click"/>
+                    <Button Content="{x:Static local:ResourceEs.buttonItems}" Style="{StaticResource ButtonsMenu}"/>
+                    <Button Content="{x:Static local:ResourceEs.buttonEmployees}" Style="{StaticResource ButtonsMenu}"/>
+                    <Button Content="{x:Static local:ResourceEs.buttonCustomers}" Style="{StaticResource ButtonsMenu}"/>
+                    <Button Content="{x:Static local:ResourceEs.buttonReports}" Style="{StaticResource ButtonsMenu}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1"  Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1" CornerRadius="8,8,8,8" Background="#FF0A1D2B" Margin="5,5,5,5" >
+            <Grid  Grid.Column="1" Margin="5,101,5,5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <Frame x:Name="fContainer"/>
+            </Grid>
+        </Border>
+
     </Grid>
 </Window>

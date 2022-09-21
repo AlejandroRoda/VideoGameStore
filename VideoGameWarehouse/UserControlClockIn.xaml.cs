@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace VideoGameWarehouse
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para UserControlClockIn.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserControlClockIn : UserControl
     {
-        public MainWindow()
+        public UserControlClockIn()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            fContainer.Navigate(new System.Uri("UserControlClockIn.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }
