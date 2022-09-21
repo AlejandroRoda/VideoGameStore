@@ -11,14 +11,14 @@
         WindowStyle="None">
     <Grid Background="#FF132D40" Margin="0,0,0,-3" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="519"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="533"/>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="817*"/>
-            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="142*"/>
+            <ColumnDefinition Width="820*"/>
+            <ColumnDefinition Width="167*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0"  Grid.Row="0" Grid.RowSpan="2" BorderThickness="1" CornerRadius="8,8,8,8" Background="#FF0A1D2B" Margin="5,5,5,5" >
             <Grid>
@@ -36,6 +36,23 @@
                 <Frame x:Name="fContainer"/>
             </Grid>
         </Border>
+        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="44" Width="156">
+            <Button Height="43" Width="50" Background="{x:Null}">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconButtonsStyle}">
+                        <Setter Property="Content" Value="{DynamicResource maximize}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=home, Path=WindowState}" Value="Maximized">
+                                <Setter Property="Content" Value="{DynamicResource restore}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Height="44" Width="46"/>
+            <Button  Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Tag="IsCloseButton" Cursor="Hand" Height="44" Width="49">
+            </Button>
+        </StackPanel>
 
     </Grid>
 </Window>
