@@ -1,1 +1,1 @@
-# VideoGameWarehouse
+# VideoGameStore
