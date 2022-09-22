@@ -221,13 +221,18 @@ namespace VideoGameStore
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-            fContainer.Navigate(new System.Uri("Pages/Home.xaml", UriKind.RelativeOrAbsolute));
+           
         }
 
 
         private void btnProducts_Click(object sender, RoutedEventArgs e)
         {
             fContainer.Navigate(new System.Uri("Pages/Dashboard.xaml", UriKind.RelativeOrAbsolute));
-        }  
+        }
+
+        private void btnSetting_Click(object sender, RoutedEventArgs e)
+        {
+            fContainer.Navigate(new System.Uri("Pages/SettingsPage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

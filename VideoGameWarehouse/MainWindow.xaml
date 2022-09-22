@@ -75,7 +75,7 @@
                         <Button x:Name="btnReports" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnReports_MouseEnter" MouseLeave="btnReports_MouseLeave">
                             <ctls:MenuItem x:Name="menuItemReports" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource file}" IconWidth="16" Text="{x:Static local:ResourceEs.btnReport}" VerticalAlignment="Center"/>
                         </Button>
-                        <Button x:Name="btnSetting" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnSetting_MouseEnter" MouseLeave="btnSetting_MouseLeave">
+                        <Button x:Name="btnSetting" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnSetting_MouseEnter" MouseLeave="btnSetting_MouseLeave" Click="btnSetting_Click" >
                             <ctls:MenuItem x:Name="menuItemSettings" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource settings}" IconWidth="16" Text="{x:Static local:ResourceEs.btnSettings}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnInfo" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnInfo_MouseEnter" MouseLeave="btnInfo_MouseLeave">
@@ -101,15 +101,6 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                
-                <Grid Grid.Column="1">
-                    
-                    <!-- Top bar -->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <!-- Top bar -->
 
                     <!-- Toggle Button Menu-->
                     <ToggleButton x:Name="Tg_Btn" Grid.Column="1" VerticalAlignment="Center" Style="{DynamicResource iToggleButtonStyle}" HorizontalAlignment="Left" BorderThickness="0" Background="Transparent" Margin="10,15,0,15" Height="30" Width="30">
@@ -150,19 +141,18 @@
                             </Button.Style>
                         </Button>
                         <Button  Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Tag="IsCloseButton" Click="btnClose_Click" 
-                     Cursor="Hand" Margin="5,0,0,0"/>
+                      Margin="5,0,0,0"/>
                     </StackPanel>
                     <!-- End: Button Close | Restore | Minimize -->
 
                     <!-- Frame -->
                     <Frame Grid.Row="1"
                        Name="fContainer"
-                       Margin="20"
+                       Margin="20, 20, 20, 20"
                        NavigationUIVisibility="Hidden">
 
                     </Frame>
-                    <!-- Frame -->
-                </Grid>
+                    <!-- Frame -->        
             </Grid>
             <!-- Central Grid-->
         </Grid>
