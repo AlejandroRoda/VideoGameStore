@@ -104,9 +104,6 @@
       <DependentUpon>ResourceEs.resx</DependentUpon>
     </Compile>
     <Compile Include="Translator\TranslateMainWindow.cs" />
-    <Compile Include="UserControlClockIn.xaml.cs">
-      <DependentUpon>UserControlClockIn.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\ClockInViewModel.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -212,10 +209,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\DarkTheme.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControlClockIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
