@@ -79,7 +79,7 @@ namespace VideoGameStore {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Home.
+        ///   Busca una cadena traducida similar a Inicio.
         /// </summary>
         public static string btnHome {
             get {

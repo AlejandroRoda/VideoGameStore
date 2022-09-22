@@ -8,9 +8,9 @@
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="596" MinWidth="1129"
         WindowStartupLocation="CenterScreen"
-        WindowState="Normal"
         WindowStyle="None"
-        Background="{x:Null}">
+        Background="Transparent" AllowsTransparency="True"
+        ResizeMode="NoResize" FontFamily="Poppins">
 
     <!-- Main Container -->
     <Border Background="{DynamicResource PrimaryBackgroundColor}"
