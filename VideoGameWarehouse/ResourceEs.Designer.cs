@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VideoGameWarehouse {
+namespace VideoGameStore {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace VideoGameWarehouse {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("VideoGameWarehouse.ResourceEs", typeof(ResourceEs).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("VideoGameStore.ResourceEs", typeof(ResourceEs).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using VideoGameWarehouse.Controls;
-using VideoGameWarehouse.Properties;
+using VideoGameStore.Controls;
+using VideoGameStore.Properties;
 
-namespace VideoGameWarehouse.Translator
+namespace VideoGameStore.Translator
 {
     public class TranslateMainWindow
     {

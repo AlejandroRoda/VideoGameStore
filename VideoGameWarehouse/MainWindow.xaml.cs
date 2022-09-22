@@ -14,10 +14,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using VideoGameWarehouse.Properties;
-using VideoGameWarehouse.Translator;
+using VideoGameStore.Properties;
+using VideoGameStore.Translator;
 
-namespace VideoGameWarehouse
+namespace VideoGameStore
 {
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml

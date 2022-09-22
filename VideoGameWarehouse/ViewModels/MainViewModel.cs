@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoGameWarehouse.ViewModels
+namespace VideoGameStore.ViewModels
 {
     internal class MainViewModel
     {
