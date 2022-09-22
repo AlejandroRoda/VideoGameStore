@@ -63,45 +63,90 @@ namespace VideoGameWarehouse {
         /// <summary>
         ///   Busca una cadena traducida similar a Fichar.
         /// </summary>
-        public static string buttonClockIn {
+        public static string btnClockIn {
             get {
-                return ResourceManager.GetString("buttonClockIn", resourceCulture);
+                return ResourceManager.GetString("btnClockIn", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Clientes.
         /// </summary>
-        public static string buttonCustomers {
+        public static string btnCustomer {
             get {
-                return ResourceManager.GetString("buttonCustomers", resourceCulture);
+                return ResourceManager.GetString("btnCustomer", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Empleados.
+        ///   Busca una cadena traducida similar a Home.
         /// </summary>
-        public static string buttonEmployees {
+        public static string btnHome {
             get {
-                return ResourceManager.GetString("buttonEmployees", resourceCulture);
+                return ResourceManager.GetString("btnHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Información.
+        /// </summary>
+        public static string btnInfo {
+            get {
+                return ResourceManager.GetString("btnInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pedidos.
+        /// </summary>
+        public static string btnOrder {
+            get {
+                return ResourceManager.GetString("btnOrder", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Productos.
         /// </summary>
-        public static string buttonItems {
+        public static string btnProduct {
             get {
-                return ResourceManager.GetString("buttonItems", resourceCulture);
+                return ResourceManager.GetString("btnProduct", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Infomes.
+        ///   Busca una cadena traducida similar a Informes.
         /// </summary>
-        public static string buttonReports {
+        public static string btnReport {
             get {
-                return ResourceManager.GetString("buttonReports", resourceCulture);
+                return ResourceManager.GetString("btnReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ventas.
+        /// </summary>
+        public static string btnSale {
+            get {
+                return ResourceManager.GetString("btnSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ajustes.
+        /// </summary>
+        public static string btnSettings {
+            get {
+                return ResourceManager.GetString("btnSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Menu.
+        /// </summary>
+        public static string lblMenu {
+            get {
+                return ResourceManager.GetString("lblMenu", resourceCulture);
             }
         }
     }

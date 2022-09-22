@@ -1,5 +1,6 @@
 ﻿<Window x:Class="VideoGameWarehouse.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:ctls="clr-namespace:VideoGameWarehouse.Controls" 
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -7,52 +8,164 @@
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="596" MinWidth="1129"
         WindowStartupLocation="CenterScreen"
-        SizeToContent="WidthAndHeight"
-        WindowStyle="None">
-    <Grid Background="#FF132D40" Margin="0,0,0,-3" >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="533"/>
+        WindowState="Normal"
+        WindowStyle="None"
+        Background="{x:Null}">
 
-        </Grid.RowDefinitions>
+    <!-- Main Container -->
+    <Border Background="{DynamicResource PrimaryBackgroundColor}"
+            CornerRadius="8">
+        <Grid>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="142*"/>
-            <ColumnDefinition Width="820*"/>
-            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0"  Grid.Row="0" Grid.RowSpan="2" BorderThickness="1" CornerRadius="8,8,8,8" Background="#FF0A1D2B" Margin="5,5,5,5" >
-            <Grid>
-                <StackPanel VerticalAlignment="Center">
-                    <Button Content="{x:Static local:ResourceEs.buttonClockIn}" Style="{StaticResource ButtonsMenu}" Click="Button_Click"/>
-                    <Button Content="{x:Static local:ResourceEs.buttonItems}" Style="{StaticResource ButtonsMenu}"/>
-                    <Button Content="{x:Static local:ResourceEs.buttonEmployees}" Style="{StaticResource ButtonsMenu}"/>
-                    <Button Content="{x:Static local:ResourceEs.buttonCustomers}" Style="{StaticResource ButtonsMenu}"/>
-                    <Button Content="{x:Static local:ResourceEs.buttonReports}" Style="{StaticResource ButtonsMenu}"/>
-                </StackPanel>
-            </Grid>
-        </Border>
-        <Border Grid.Column="1"  Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1" CornerRadius="8,8,8,8" Background="#FF0A1D2B" Margin="5,5,5,5" >
-            <Grid  Grid.Column="1" Margin="5,101,5,5" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                <Frame x:Name="fContainer"/>
-            </Grid>
-        </Border>
-        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="44" Width="156">
-            <Button Height="43" Width="50" Background="{x:Null}">
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconButtonsStyle}">
-                        <Setter Property="Content" Value="{DynamicResource maximize}"/>
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding ElementName=home, Path=WindowState}" Value="Maximized">
-                                <Setter Property="Content" Value="{DynamicResource restore}"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Height="44" Width="46"/>
-            <Button  Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Tag="IsCloseButton" Cursor="Hand" Height="44" Width="49">
-            </Button>
-        </StackPanel>
 
-    </Grid>
+            <!-- Menu lateral bar -->
+            <Border Grid.Column="0"  BorderThickness="1" CornerRadius="8,8,8,8" Background="#FF0A1D2B" Margin="5,5,5,5" >
+
+                <Grid x:Name="GridNav" Width="60" Margin="0,5,0,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Logo -->
+                    <Grid Grid.Row="0">
+                        <Border 
+                        Margin="14,5,0,0"
+                        Width="32" Height="24"
+                        HorizontalAlignment="Left">
+                            <Border.Background>
+                                <ImageBrush ImageSource="Resources/Img/logo.png" Stretch="Uniform"/>
+                            </Border.Background>
+                        </Border>
+
+                        <Label Content="{x:Static local:ResourceEs.lblMenu}"
+                           Foreground="#526070"
+                           FontWeight="Bold"
+                           FontSize="16"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="60 5 0 0"/>
+                    </Grid>
+                    <!-- Logo -->
+
+                    <!-- Menu Items -->
+                    <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                        <Button x:Name="btnHome" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnHome_MouseEnter" MouseLeave="btnHome_MouseLeave" Click="btnHome_Click">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource home}" IconWidth="16" Text="{x:Static local:ResourceEs.btnHome}" VerticalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="btnClockIn" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnClockIn_MouseEnter" MouseLeave="btnClockIn_MouseLeave">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource clock}" IconWidth="16" Text="{x:Static local:ResourceEs.btnClockIn}" VerticalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="btnProducts" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnProducts_MouseEnter" MouseLeave="btnProducts_MouseLeave" Click="btnProducts_Click">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource products}" IconWidth="16" Text="{x:Static local:ResourceEs.btnProduct}" VerticalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="btnSale" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnSale_MouseEnter" MouseLeave="btnSale_MouseLeave">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource sale}" IconWidth="16" Text="{x:Static local:ResourceEs.btnSale}" VerticalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="btnOrder" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnOrder_MouseEnter" MouseLeave="btnOrder_MouseLeave">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource order}" IconWidth="16" Text="{x:Static local:ResourceEs.btnOrder}" VerticalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="btnCustomers" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnCustomers_MouseEnter" MouseLeave="btnCustomers_MouseLeave">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource customers}" IconWidth="16" Text="{x:Static local:ResourceEs.btnCustomer}" VerticalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="btnReports" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnReports_MouseEnter" MouseLeave="btnReports_MouseLeave">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource file}" IconWidth="16" Text="{x:Static local:ResourceEs.btnReport}" VerticalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="btnSetting" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnSetting_MouseEnter" MouseLeave="btnSetting_MouseLeave">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource settings}" IconWidth="16" Text="{x:Static local:ResourceEs.btnSettings}" VerticalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="btnInfo" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnInfo_MouseEnter" MouseLeave="btnInfo_MouseLeave">
+                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource info}" IconWidth="16" Text="{x:Static local:ResourceEs.btnInfo}" VerticalAlignment="Center"/>
+                        </Button>
+                    </StackPanel>
+
+                    <!-- Popup -->
+                    <Popup x:Name="Popup"  AllowsTransparency="True"  HorizontalOffset="0" VerticalOffset="10">
+                        <ctls:UserPopup x:Name="Header" Foreground="{DynamicResource PrimaryTextColor}"/>
+                    </Popup>
+                    <!-- Popup-->
+                    <!-- Menu Items -->
+
+                </Grid>
+            </Border>
+            <!-- Menu lateral bar -->          
+            
+            <!-- Central Grid-->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                
+                <Grid Grid.Column="1">
+                    
+                    <!-- Top bar -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!-- Top bar -->
+
+                    <!-- Toggle Button Menu-->
+                    <ToggleButton x:Name="Tg_Btn" Grid.Column="1" VerticalAlignment="Center" Style="{DynamicResource iToggleButtonStyle}" HorizontalAlignment="Left" BorderThickness="0" Background="Transparent" Margin="10,15,0,15" Height="30" Width="30">
+                        <ToggleButton.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="HideStackPanel">
+                                        <DoubleAnimation Storyboard.TargetName="GridNav" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="210" To="60" Duration="0:0:0.5">
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="ShowStackPanel">
+                                        <DoubleAnimation Storyboard.TargetName="GridNav" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="60" To="210" Duration="0:0:0.5">
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ToggleButton.Triggers>
+                    </ToggleButton>
+                    <!-- Toggle Button Menu-->
+
+                    <!-- Start: Button Close | Restore | Minimize -->
+                    <StackPanel Grid.Column="1" Orientation="Horizontal"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Height="24" Width="93" >
+                        <Button x:Name="btnMinimize" Click="btnMinimize_Click" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}"  Cursor="Hand" Margin="0,0,5,0"/>
+                        <Button x:Name="btnRestore" Click="btnRestore_Click" Cursor="Hand" Margin="5,0,3,0">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconButtonsStyle}">
+                                    <Setter Property="Content" Value="{DynamicResource maximize}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding WindowState, ElementName=home}" Value="Maximized">
+                                            <Setter Property="Content" Value="{DynamicResource restore}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button  Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Tag="IsCloseButton" Click="btnClose_Click" 
+                     Cursor="Hand" Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <!-- End: Button Close | Restore | Minimize -->
+
+                    <!-- Frame -->
+                    <Frame Grid.Row="1"
+                       Name="fContainer"
+                       Margin="20"
+                       NavigationUIVisibility="Hidden">
+
+                    </Frame>
+                    <!-- Frame -->
+                </Grid>
+            </Grid>
+            <!-- Central Grid-->
+        </Grid>
+    </Border>
+    <!-- Main Container -->
 </Window>
