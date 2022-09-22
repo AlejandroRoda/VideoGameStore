@@ -76,9 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ResourceEs.resx</DependentUpon>
     </Compile>
+    <Compile Include="Translator\TranslateMainWindow.cs" />
     <Compile Include="UserControlClockIn.xaml.cs">
       <DependentUpon>UserControlClockIn.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainWindow.xaml.cs">

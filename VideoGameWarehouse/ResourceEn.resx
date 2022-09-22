@@ -123,6 +123,9 @@
   <data name="btnCustomer" xml:space="preserve">
     <value>Customers</value>
   </data>
+  <data name="btnHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
   <data name="btnInfo" xml:space="preserve">
     <value>Information</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="btnSale" xml:space="preserve">
     <value>Sales</value>
+  </data>
+  <data name="btnSettings" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="lblMenu" xml:space="preserve">
     <value>Menu</value>

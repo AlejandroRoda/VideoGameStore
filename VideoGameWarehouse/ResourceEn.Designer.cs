@@ -79,6 +79,15 @@ namespace VideoGameWarehouse {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Home.
+        /// </summary>
+        internal static string btnHome {
+            get {
+                return ResourceManager.GetString("btnHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Information.
         /// </summary>
         internal static string btnInfo {
@@ -120,6 +129,15 @@ namespace VideoGameWarehouse {
         internal static string btnSale {
             get {
                 return ResourceManager.GetString("btnSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Settings.
+        /// </summary>
+        internal static string btnSettings {
+            get {
+                return ResourceManager.GetString("btnSettings", resourceCulture);
             }
         }
         

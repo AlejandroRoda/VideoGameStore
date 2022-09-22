@@ -55,31 +55,31 @@
                     <!-- Menu Items -->
                     <StackPanel Grid.Row="1" VerticalAlignment="Center">
                         <Button x:Name="btnHome" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnHome_MouseEnter" MouseLeave="btnHome_MouseLeave" Click="btnHome_Click">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource home}" IconWidth="16" Text="{x:Static local:ResourceEs.btnHome}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemHome" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource home}" IconWidth="16" Text="{x:Static local:ResourceEs.btnHome}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnClockIn" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnClockIn_MouseEnter" MouseLeave="btnClockIn_MouseLeave">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource clock}" IconWidth="16" Text="{x:Static local:ResourceEs.btnClockIn}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemClockIn" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource clock}" IconWidth="16" Text="{x:Static local:ResourceEs.btnClockIn}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnProducts" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnProducts_MouseEnter" MouseLeave="btnProducts_MouseLeave" Click="btnProducts_Click">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource products}" IconWidth="16" Text="{x:Static local:ResourceEs.btnProduct}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemProducts" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource products}" IconWidth="16" Text="{x:Static local:ResourceEs.btnProduct}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnSale" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnSale_MouseEnter" MouseLeave="btnSale_MouseLeave">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource sale}" IconWidth="16" Text="{x:Static local:ResourceEs.btnSale}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemSale" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource sale}" IconWidth="16" Text="{x:Static local:ResourceEs.btnSale}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnOrder" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnOrder_MouseEnter" MouseLeave="btnOrder_MouseLeave">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource order}" IconWidth="16" Text="{x:Static local:ResourceEs.btnOrder}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemOrder" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource order}" IconWidth="16" Text="{x:Static local:ResourceEs.btnOrder}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnCustomers" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnCustomers_MouseEnter" MouseLeave="btnCustomers_MouseLeave">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource customers}" IconWidth="16" Text="{x:Static local:ResourceEs.btnCustomer}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemCustomers" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource customers}" IconWidth="16" Text="{x:Static local:ResourceEs.btnCustomer}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnReports" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnReports_MouseEnter" MouseLeave="btnReports_MouseLeave">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource file}" IconWidth="16" Text="{x:Static local:ResourceEs.btnReport}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemReports" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource file}" IconWidth="16" Text="{x:Static local:ResourceEs.btnReport}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnSetting" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnSetting_MouseEnter" MouseLeave="btnSetting_MouseLeave">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource settings}" IconWidth="16" Text="{x:Static local:ResourceEs.btnSettings}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemSettings" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource settings}" IconWidth="16" Text="{x:Static local:ResourceEs.btnSettings}" VerticalAlignment="Center"/>
                         </Button>
                         <Button x:Name="btnInfo" Style="{DynamicResource PopupButtonStyle}"  MouseEnter="btnInfo_MouseEnter" MouseLeave="btnInfo_MouseLeave">
-                            <ctls:MenuItem GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource info}" IconWidth="16" Text="{x:Static local:ResourceEs.btnInfo}" VerticalAlignment="Center"/>
+                            <ctls:MenuItem x:Name="menuItemInfo" GroupName="MenuItem" IndicatorBrush="{DynamicResource PrimaryBlueColor}" Icon="{DynamicResource info}" IconWidth="16" Text="{x:Static local:ResourceEs.btnInfo}" VerticalAlignment="Center"/>
                         </Button>
                     </StackPanel>
 

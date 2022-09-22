@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Resources;
+using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VideoGameWarehouse.Properties;
+using VideoGameWarehouse.Translator;
 
 namespace VideoGameWarehouse
 {
@@ -21,9 +24,13 @@ namespace VideoGameWarehouse
     /// </summary>
     public partial class MainWindow : Window
     {
+       TranslateMainWindow traducir;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            TranslateMainWindow.TranslateLeftBarButtons(this);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -54,10 +61,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "Home";
                 Popup.PlacementTarget = btnHome;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnHome;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -71,10 +79,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "Product";
                 Popup.PlacementTarget = btnProducts;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnProduct;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -88,10 +97,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "ClockIn";
                 Popup.PlacementTarget = btnClockIn;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnClockIn;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -105,10 +115,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "Order";
                 Popup.PlacementTarget = btnOrder;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnOrder;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -122,10 +133,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "Sale";
                 Popup.PlacementTarget = btnSale;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnSale;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -139,10 +151,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "Customer";
                 Popup.PlacementTarget = btnCustomers;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnCustomer;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -156,10 +169,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "Info";
                 Popup.PlacementTarget = btnInfo;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnInfo;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -173,10 +187,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "Report";
                 Popup.PlacementTarget = btnReports;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnReport;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -189,10 +204,11 @@ namespace VideoGameWarehouse
         {
             if (Tg_Btn.IsChecked == false)
             {
+                Popup.Name = "Settings";
                 Popup.PlacementTarget = btnSetting;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = ResourceEs.btnSettings;
+                TranslateMainWindow.TranslatePopUp(Header, Popup);
             }
         }
 
@@ -212,8 +228,6 @@ namespace VideoGameWarehouse
         private void btnProducts_Click(object sender, RoutedEventArgs e)
         {
             fContainer.Navigate(new System.Uri("Pages/Dashboard.xaml", UriKind.RelativeOrAbsolute));
-        }
-
-
+        }  
     }
 }
